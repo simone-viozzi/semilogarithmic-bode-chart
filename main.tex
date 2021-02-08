@@ -1,0 +1,101 @@
+\documentclass[11pt]{article}
+
+\usepackage{geometry}
+ \geometry{
+    landscape,
+    a4paper,
+    total={257mm, 170mm},
+    left=0mm,
+    top=20mm,
+    right=2mm,
+    bottom=2mm,
+    footskip=0mm,
+ }
+
+\usepackage{sectsty}
+\usepackage{graphicx}
+
+\usepackage{amsmath,amssymb}
+
+\usepackage{tikz}
+\usepackage{bodegraph}
+\usetikzlibrary{plotmarks}
+\usepackage{pgfplots}
+
+\usetikzlibrary{intersections}
+\usetikzlibrary{calc}
+\usetikzlibrary{positioning}
+
+\usepackage{paracol}
+
+%\usepackage[active,tightpage]{preview}
+%\PreviewEnvironment{tikzpicture}
+
+
+% Margins
+%\topmargin=0in
+%\evensidemargin=0in
+%\oddsidemargin=0in
+%\textwidth=6.5in
+%\textheight=9.0in
+%\headsep=0.25in
+
+
+\begin{document}
+
+    \pagestyle{empty}
+
+    \begin{paracol}{2}
+        
+
+        \begin{tikzpicture}[xshift=-1cm, xscale=21/10]
+            \begin{scope}[yscale=99/1600, 
+                semilog lines/.style={black!20},
+                semilog lines 2/.style={gray!50,dotted},
+                semilog label y/.style={above,white},
+                semilog label x/.style={above,white}
+                ]
+                \UnitedB
+                \semilog{-2}{4}{-60}{40}
+            \end{scope}
+
+            \begin{scope}[yshift=-10cm,yscale=1/60,
+                semilog lines/.style={black!20},
+                semilog lines 2/.style={gray!50,dotted},
+                semilog label y/.style={above,white},
+                semilog label x/.style={below,white}
+                ]
+                \UniteDegre
+                \OrdBode{30}
+                \semilog{-2}{4}{-180}{300}
+            \end{scope}
+        \end{tikzpicture}
+
+    \switchcolumn
+        
+        \begin{tikzpicture}[xshift=-1cm, xscale=21/10]
+            \begin{scope}[yscale=99/1600, 
+                semilog lines/.style={black!20},
+                semilog lines 2/.style={gray!50,dotted},
+                semilog label y/.style={above,white},
+                semilog label x/.style={above,white}
+                ]
+                \UnitedB
+                \semilog{-2}{4}{-60}{40}
+            \end{scope}
+
+            \begin{scope}[yshift=-10cm,yscale=1/60,
+                semilog lines/.style={black!20},
+                semilog lines 2/.style={gray!50,dotted},
+                semilog label y/.style={above,white},
+                semilog label x/.style={below,white}
+                ]
+                \UniteDegre
+                \OrdBode{30}
+                \semilog{-2}{4}{-180}{300}
+            \end{scope}
+        \end{tikzpicture}
+
+    \end{paracol}
+
+\end{document}
