@@ -6,8 +6,8 @@
     a4paper,
     total={257mm, 170mm},
     left=0mm,
-    top=20mm,
-    right=2mm,
+    top=8mm,
+    right=6mm,
     bottom=2mm,
     footskip=0mm,
  }
@@ -41,6 +41,8 @@
 %\headsep=0.25in
 
 
+
+
 \begin{document}
 
     \pagestyle{empty}
@@ -48,53 +50,62 @@
     \begin{paracol}{2}
         
 
-        \begin{tikzpicture}[xshift=-1cm, xscale=21/10]
-            \begin{scope}[yscale=99/1600, 
+        \begin{tikzpicture}[xshift=-1cm, xscale=23/10]
+
+            \begin{scope}[ yscale=1/30,
                 semilog lines/.style={black!20},
-                semilog lines 2/.style={gray!50,dotted},
-                semilog label y/.style={above,white},
-                semilog label x/.style={above,white}
+                semilog lines 2/.style={gray!45,dotted},
+                semilog label y/.style={above,black},
+                semilog label x/.style={below,black},
+                semilog axis y/.style={[ymin=-160, ymax=60]}
                 ]
+                
                 \UnitedB
-                \semilog{-2}{4}{-60}{40}
+                \OrdBode{20}
+                \semilog{-2}{3}{-120}{80}
+                
             \end{scope}
 
-            \begin{scope}[yshift=-10cm,yscale=1/60,
+            \begin{scope}[yshift=-5.5cm,yscale=1/27,
                 semilog lines/.style={black!20},
                 semilog lines 2/.style={gray!50,dotted},
-                semilog label y/.style={above,white},
-                semilog label x/.style={below,white}
+                semilog label y/.style={above,black},
+                semilog label x/.style={below,black}
                 ]
                 \UniteDegre
-                \OrdBode{30}
-                \semilog{-2}{4}{-180}{300}
+                \OrdBode{15}
+                \semilog{-2}{3}{-270}{0}
             \end{scope}
         \end{tikzpicture}
 
     \switchcolumn
         
-        \begin{tikzpicture}[xshift=-1cm, xscale=21/10]
-            \begin{scope}[yscale=99/1600, 
-                semilog lines/.style={black!20},
-                semilog lines 2/.style={gray!50,dotted},
-                semilog label y/.style={above,white},
-                semilog label x/.style={above,white}
-                ]
-                \UnitedB
-                \semilog{-2}{4}{-60}{40}
-            \end{scope}
+    \begin{tikzpicture}[xshift=1cm, xscale=23/10]
+        \begin{scope}[ yscale=1/30,
+            semilog lines/.style={black!20},
+            semilog lines 2/.style={gray!45,dotted},
+            semilog label y/.style={above,black},
+            semilog label x/.style={below,black},
+            semilog axis y/.style={[ymin=-160, ymax=60]}
+            ]
+            
+            \UnitedB
+            \OrdBode{20}
+            \semilog{-2}{3}{-120}{80}
+            
+        \end{scope}
 
-            \begin{scope}[yshift=-10cm,yscale=1/60,
-                semilog lines/.style={black!20},
-                semilog lines 2/.style={gray!50,dotted},
-                semilog label y/.style={above,white},
-                semilog label x/.style={below,white}
-                ]
-                \UniteDegre
-                \OrdBode{30}
-                \semilog{-2}{4}{-180}{300}
-            \end{scope}
-        \end{tikzpicture}
+        \begin{scope}[yshift=-5.5cm,yscale=1/27,
+            semilog lines/.style={black!20},
+            semilog lines 2/.style={gray!50,dotted},
+            semilog label y/.style={above,black},
+            semilog label x/.style={below,black}
+            ]
+            \UniteDegre
+            \OrdBode{15}
+            \semilog{-2}{3}{-270}{0}
+        \end{scope}
+    \end{tikzpicture}
 
     \end{paracol}
 
