@@ -46,42 +46,10 @@
 \begin{document}
 
     \pagestyle{empty}
-
-    \begin{paracol}{2}
         
+    \begin{tikzpicture}[xshift=0cm, xscale=260/100]
 
-        \begin{tikzpicture}[xshift=-1cm, xscale=23/10]
-
-            \begin{scope}[ yscale=1/30,
-                semilog lines/.style={black!20},
-                semilog lines 2/.style={gray!45,dotted},
-                semilog label y/.style={above,black},
-                semilog label x/.style={below,black},
-                semilog axis y/.style={[ymin=-160, ymax=60]}
-                ]
-                
-                \UnitedB
-                \OrdBode{20}
-                \semilog{-2}{3}{-120}{80}
-                
-            \end{scope}
-
-            \begin{scope}[yshift=-5.5cm,yscale=1/27,
-                semilog lines/.style={black!20},
-                semilog lines 2/.style={gray!50,dotted},
-                semilog label y/.style={above,black},
-                semilog label x/.style={below,black}
-                ]
-                \UniteDegre
-                \OrdBode{15}
-                \semilog{-2}{3}{-270}{0}
-            \end{scope}
-        \end{tikzpicture}
-
-    \switchcolumn
-        
-    \begin{tikzpicture}[xshift=1cm, xscale=23/10]
-        \begin{scope}[ yscale=1/30,
+        \begin{scope}[ yscale=9/240,
             semilog lines/.style={black!20},
             semilog lines 2/.style={gray!45,dotted},
             semilog label y/.style={above,black},
@@ -90,8 +58,8 @@
             ]
             
             \UnitedB
-            \OrdBode{20}
-            \semilog{-2}{3}{-120}{80}
+            \OrdBode{10}
+            \semilog{-3}{3}{-120}{80}
             
         \end{scope}
 
@@ -103,10 +71,8 @@
             ]
             \UniteDegre
             \OrdBode{15}
-            \semilog{-2}{3}{-270}{0}
+            \semilog{-3}{3}{-270}{0}
         \end{scope}
     \end{tikzpicture}
-
-    \end{paracol}
 
 \end{document}
